@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Dashboard - Program Cek Kesehatan Gratis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>Executive Dashboard - Program Cek Kesehatan Gratis</h1>
+                <div class="header-meta">
+                    <span class="update-time">Terakhir diperbarui: 3 November 2025, 15:00 WIB</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="dashboard-nav">
+            <button class="nav-btn active" data-tab="overview">Overview</button>
+            <button class="nav-btn" data-tab="tab1">Manfaat Ekonomi</button>
+            <button class="nav-btn" data-tab="tab2">Penghematan Jangka Menengah</button>
+            <button class="nav-btn" data-tab="tab3">Analisis Regional</button>
+            <button class="nav-btn" data-tab="tab4">Kesetaraan Alokasi</button>
+            <button class="nav-btn" data-tab="tab5">Risiko &amp; Kebocoran</button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="dashboard-main">
+            <!-- OVERVIEW TAB -->
+            <div class="tab-content active" id="overview">
+                <div class="summary-cards">
+                    <div class="card metric-card">
+                        <div class="metric-icon" style="background: var(--color-bg-1);">💰</div>
+                        <div class="metric-content">
+                            <h3>Total Alokasi APBN</h3>
+                            <p class="metric-value">Rp 3,4 Triliun</p>
+                            <p class="metric-detail">Kemenkes Rp 2,2T + DAK Rp 1,2T</p>
+                        </div>
+                    </div>
+                    <div class="card metric-card">
+                        <div class="metric-icon" style="background: var(--color-bg-3);">👥</div>
+                        <div class="metric-content">
+                            <h3>Realisasi Peserta</h3>
+                            <p class="metric-value">20,083 Juta</p>
+                            <p class="metric-detail">dari 280 Juta (7,17%)</p>
+                        </div>
+                    </div>
+                    <div class="card metric-card">
+                        <div class="metric-icon" style="background: var(--color-bg-5);">📊</div>
+                        <div class="metric-content">
+                            <h3>Benefit-Cost Ratio</h3>
+                            <p class="metric-value">2,15 - 3,68</p>
+                            <p class="metric-detail">ROI Sangat Positif</p>
+                        </div>
+                    </div>
+                    <div class="card metric-card">
+                        <div class="metric-icon" style="background: var(--color-bg-2);">💵</div>
+                        <div class="metric-content">
+                            <h3>Potensi Penghematan</h3>
+                            <p class="metric-value">Rp 7,3 - 12,5 T</p>
+                            <p class="metric-detail">Per Tahun</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-section">
+                    <div class="card">
+                        <h2>Progress Realisasi Peserta</h2>
+                        <div class="progress-container">
+                            <div class="progress-labels">
+                                <span>Target: 280 Juta</span>
+                                <span>Realisasi: 20,083 Juta (7,17%)</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 7.17%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="card">
+                        <h3>Status Program</h3>
+                        <div class="status-list">
+                            <div class="status-item status-success">
+                                <span class="status-dot"></span>
+                                <div class="status-content">
+                                    <strong>ROI Positif</strong>
+                                    <p>BCR 2,15-3,68 melampaui target</p>
+                                </div>
+                            </div>
+                            <div class="status-item status-warning">
+                                <span class="status-dot"></span>
+                                <div class="status-content">
+                                    <strong>Realisasi Peserta</strong>
+                                    <p>Hanya 7,17% dari target nasional</p>
+                                </div>
+                            </div>
+                            <div class="status-item status-warning">
+                                <span class="status-dot"></span>
+                                <div class="status-content">
+                                    <strong>Disparitas Regional</strong>
+                                    <p>Jawa 73% vs Luar Jawa 27%</p>
+                                </div>
+                            </div>
+                            <div class="status-item status-error">
+                                <span class="status-dot"></span>
+                                <div class="status-content">
+                                    <strong>Risiko Kebocoran</strong>
+                                    <p>Potensi Rp 170-510 Miliar (5-15%)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Jangkauan Program</h3>
+                        <div class="coverage-stats">
+                            <div class="coverage-item">
+                                <div class="coverage-number">38</div>
+                                <div class="coverage-label">Provinsi</div>
+                            </div>
+                            <div class="coverage-item">
+                                <div class="coverage-number">510</div>
+                                <div class="coverage-label">Kabupaten/Kota</div>
+                            </div>
+                            <div class="coverage-item">
+                                <div class="coverage-number">10.132</div>
+                                <div class="coverage-label">Puskesmas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 1: MANFAAT EKONOMI -->
+            <div class="tab-content" id="tab1">
+                <div class="tab-header">
+                    <h2>Nilai Manfaat Ekonomi dan Kesehatan</h2>
+                    <button class="btn-export" onclick="exportTab('tab1')">📥 Export Data</button>
+                </div>
+
+                <div class="summary-cards">
+                    <div class="card info-card">
+                        <h3>Investasi APBN</h3>
+                        <p class="info-value">Rp 3.400 Miliar</p>
+                        <p class="info-detail">20.083.000 peserta</p>
+                        <p class="info-detail">Biaya: Rp 169.000/peserta</p>
+                    </div>
+                    <div class="card info-card">
+                        <h3>Baseline Penyakit Kronis</h3>
+                        <p class="info-value">Rp 35.300 Miliar</p>
+                        <p class="info-detail">27,9 juta pasien</p>
+                        <p class="info-detail">Rp 1,26 juta/pasien/tahun</p>
+                    </div>
+                </div>
+
+                <div class="value-proposition">
+                    <div class="card highlight-card">
+                        <h3>💡 Value Proposition</h3>
+                        <p class="highlight-text">Setiap Rp 1 investasi menghasilkan pengembalian Rp 2,15 - 3,68</p>
+                    </div>
+                </div>
+
+                <div class="chart-grid">
+                    <div class="card chart-card">
+                        <h3>Benefit-Cost Ratio (BCR)</h3>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="bcrChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card chart-card">
+                        <h3>Potensi Penghematan Tahunan</h3>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="savingsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Rincian Penghematan Potensial</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Kategori Penghematan</th>
+                                <th>Minimum (Miliar)</th>
+                                <th>Maksimum (Miliar)</th>
+                                <th>Rata-rata (Miliar)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pencegahan Komplikasi Diabetes</td>
+                                <td>Rp 1.500</td>
+                                <td>Rp 2.000</td>
+                                <td>Rp 1.750</td>
+                            </tr>
+                            <tr>
+                                <td>Pencegahan Komplikasi Hipertensi</td>
+                                <td>Rp 2.000</td>
+                                <td>Rp 3.000</td>
+                                <td>Rp 2.500</td>
+                            </tr>
+                            <tr>
+                                <td>Pengurangan Klaim Katastropik</td>
+                                <td>Rp 2.000</td>
+                                <td>Rp 4.000</td>
+                                <td>Rp 3.000</td>
+                            </tr>
+                            <tr>
+                                <td>Pengurangan Rawat Inap</td>
+                                <td>Rp 500</td>
+                                <td>Rp 1.000</td>
+                                <td>Rp 750</td>
+                            </tr>
+                            <tr>
+                                <td>Peningkatan Produktivitas</td>
+                                <td>Rp 1.000</td>
+                                <td>Rp 2.000</td>
+                                <td>Rp 1.500</td>
+                            </tr>
+                            <tr>
+                                <td>Penghematan Laboratorium</td>
+                                <td>Rp 300</td>
+                                <td>Rp 500</td>
+                                <td>Rp 400</td>
+                            </tr>
+                            <tr class="table-total">
+                                <td><strong>TOTAL</strong></td>
+                                <td><strong>Rp 7.300</strong></td>
+                                <td><strong>Rp 12.500</strong></td>
+                                <td><strong>Rp 9.900</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 2: PENGHEMATAN JANGKA MENENGAH -->
+            <div class="tab-content" id="tab2">
+                <div class="tab-header">
+                    <h2>Potensi Penghematan Jangka Menengah (3-5 Tahun)</h2>
+                    <button class="btn-export" onclick="exportTab('tab2')">📥 Export Data</button>
+                </div>
+
+                <div class="card">
+                    <h3>Proyeksi Penghematan 5 Tahun</h3>
+                    <div class="chart-container" style="height: 400px;">
+                        <canvas id="projectionChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Detail Proyeksi Penghematan</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Kategori</th>
+                                <th>Tahun 1-2 (Miliar)</th>
+                                <th>Tahun 3-5 (Miliar)</th>
+                                <th>Total Benefit (Miliar)</th>
+                                <th>BCR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Komplikasi Diabetes</td>
+                                <td>Rp 1.000</td>
+                                <td>Rp 2.750</td>
+                                <td>Rp 3.750</td>
+                                <td>1.10</td>
+                            </tr>
+                            <tr>
+                                <td>Komplikasi Hipertensi</td>
+                                <td>Rp 1.500</td>
+                                <td>Rp 3.750</td>
+                                <td>Rp 5.250</td>
+                                <td>1.54</td>
+                            </tr>
+                            <tr>
+                                <td>Klaim Katastropik</td>
+                                <td>Rp 2.000</td>
+                                <td>Rp 4.500</td>
+                                <td>Rp 6.500</td>
+                                <td>1.91</td>
+                            </tr>
+                            <tr>
+                                <td>Rawat Inap</td>
+                                <td>Rp 400</td>
+                                <td>Rp 1.100</td>
+                                <td>Rp 1.500</td>
+                                <td>0.44</td>
+                            </tr>
+                            <tr>
+                                <td>Produktivitas</td>
+                                <td>Rp 800</td>
+                                <td>Rp 2.200</td>
+                                <td>Rp 3.000</td>
+                                <td>0.88</td>
+                            </tr>
+                            <tr>
+                                <td>Laboratorium</td>
+                                <td>Rp 250</td>
+                                <td>Rp 650</td>
+                                <td>Rp 900</td>
+                                <td>0.26</td>
+                            </tr>
+                            <tr class="table-total">
+                                <td><strong>TOTAL</strong></td>
+                                <td><strong>Rp 5.950</strong></td>
+                                <td><strong>Rp 14.950</strong></td>
+                                <td><strong>Rp 20.900</strong></td>
+                                <td><strong>6.13</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="chart-grid">
+                    <div class="card">
+                        <h3>BCR Target vs Realisasi</h3>
+                        <div class="gauge-container">
+                            <div class="gauge-display">
+                                <div class="gauge-value">2,15 - 3,68</div>
+                                <div class="gauge-label">Benefit-Cost Ratio</div>
+                                <div class="gauge-status status-success">✓ Melampaui Target (2.0)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Asumsi Kunci</h3>
+                        <ul class="assumption-list">
+                            <li>Pencegahan komplikasi diabetes: 20%</li>
+                            <li>Pencegahan komplikasi hipertensi: 15%</li>
+                            <li>Pengurangan klaim katastropik: 10-15%</li>
+                            <li>Deteksi dini mengurangi biaya rawat: 30%</li>
+                            <li>Peningkatan produktivitas: 5-10 hari kerja/tahun</li>
+                            <li>Efisiensi laboratorium: 15-20%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: ANALISIS REGIONAL -->
+            <div class="tab-content" id="tab3">
+                <div class="tab-header">
+                    <h2>Kesesuaian Serapan Anggaran dan Output Regional</h2>
+                    <button class="btn-export" onclick="exportTab('tab3')">📥 Export Data</button>
+                </div>
+
+                <div class="alert alert-warning">
+                    <strong>⚠️ Perhatian:</strong> Papua perlu akselerasi program - hanya 944 peserta terlayani
+                </div>
+
+                <div class="card">
+                    <h3>Performa Regional</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Provinsi</th>
+                                <th>Peserta</th>
+                                <th>Tingkat Kehadiran</th>
+                                <th>Rank</th>
+                                <th>Status Efisiensi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jawa Tengah</td>
+                                <td>1.300.000</td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td><span class="status status--success">Sangat Efisien</span></td>
+                            </tr>
+                            <tr>
+                                <td>Jawa Timur</td>
+                                <td>745.000</td>
+                                <td>-</td>
+                                <td>2</td>
+                                <td><span class="status status--success">Sangat Efisien</span></td>
+                            </tr>
+                            <tr>
+                                <td>Jawa Barat</td>
+                                <td>242.000</td>
+                                <td>-</td>
+                                <td>3</td>
+                                <td><span class="status status--success">Efisien</span></td>
+                            </tr>
+                            <tr>
+                                <td>Banten</td>
+                                <td>379.328</td>
+                                <td>93,89%</td>
+                                <td>-</td>
+                                <td><span class="status status--success">Efisien</span></td>
+                            </tr>
+                            <tr>
+                                <td>DIY</td>
+                                <td>47.800</td>
+                                <td>87,62%</td>
+                                <td>-</td>
+                                <td><span class="status status--success">Sangat Efisien</span></td>
+                            </tr>
+                            <tr>
+                                <td>Gorontalo Utara</td>
+                                <td>42.946</td>
+                                <td>31,85%</td>
+                                <td>-</td>
+                                <td><span class="status status--success">Sangat Efisien</span></td>
+                            </tr>
+                            <tr>
+                                <td>Rembang</td>
+                                <td>29.022</td>
+                                <td>96,5%</td>
+                                <td>12</td>
+                                <td><span class="status status--success">Sangat Efisien</span></td>
+                            </tr>
+                            <tr class="row-warning">
+                                <td>Papua</td>
+                                <td>944</td>
+                                <td>70,66%</td>
+                                <td>-</td>
+                                <td><span class="status status--error">Perlu Perbaikan</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="chart-grid">
+                    <div class="card">
+                        <h3>Distribusi Peserta per Provinsi</h3>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="regionalChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Penyakit Terdeteksi</h3>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="diseaseChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Output Deteksi Penyakit</h3>
+                    <div class="disease-stats">
+                        <div class="disease-item">
+                            <div class="disease-bar" style="width: 79.49%;"></div>
+                            <span class="disease-label">Tekanan Darah Abnormal: 79,49%</span>
+                        </div>
+                        <div class="disease-item">
+                            <div class="disease-bar" style="width: 55%;"></div>
+                            <span class="disease-label">Hiperglikemia: 55,0%</span>
+                        </div>
+                        <div class="disease-item">
+                            <div class="disease-bar" style="width: 37.5%;"></div>
+                            <span class="disease-label">Kolesterol Abnormal: 37,5%</span>
+                        </div>
+                        <div class="disease-item">
+                            <div class="disease-bar" style="width: 30.8%;"></div>
+                            <span class="disease-label">Hipertensi: 30,8%</span>
+                        </div>
+                        <div class="disease-item">
+                            <div class="disease-bar" style="width: 24.3%;"></div>
+                            <span class="disease-label">Diabetes: 24,3%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: KESETARAAN ALOKASI -->
+            <div class="tab-content" id="tab4">
+                <div class="tab-header">
+                    <h2>Analisis Kesetaraan Alokasi Antarwilayah</h2>
+                    <button class="btn-export" onclick="exportTab('tab4')">📥 Export Data</button>
+                </div>
+
+                <div class="card">
+                    <h3>Disparitas Jawa vs Luar Jawa</h3>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="disparityChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Analisis Kesetaraan</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Aspek</th>
+                                <th>Temuan</th>
+                                <th>Implikasi</th>
+                                <th>Rekomendasi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Disparitas Geografis</strong></td>
+                                <td>Jawa dominan 73% dari total</td>
+                                <td>Alokasi belum proporsional dengan populasi</td>
+                                <td>Realokasi berbasis kebutuhan dan populasi</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aksesibilitas Puskesmas</strong></td>
+                                <td>10.132 Puskesmas di 510 kab/kota</td>
+                                <td>Cukup merata, namun kualitas bervariasi</td>
+                                <td>Standarisasi layanan dan monitoring</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kesenjangan Urban-Rural</strong></td>
+                                <td>Jawa &gt; Sumatra &gt; Sulawesi &gt;&gt;&gt; Papua (944)</td>
+                                <td>Perlu affirmative action untuk daerah 3T</td>
+                                <td>Incentive khusus daerah terpencil</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Partisipasi</strong></td>
+                                <td>DIY 87,62% vs Papua 70,66%</td>
+                                <td>Sosialisasi tidak merata</td>
+                                <td>Kampanye nasional terstruktur</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SDM Kesehatan</strong></td>
+                                <td>Variasi kemampuan teknis</td>
+                                <td>Training diperlukan</td>
+                                <td>Program capacity building</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card highlight-card">
+                    <h3>💡 Rekomendasi Kebijakan</h3>
+                    <ul class="recommendation-list">
+                        <li><strong>Mekanisme Equalization Fund:</strong> Alokasi tambahan untuk wilayah dengan coverage rendah</li>
+                        <li><strong>Affirmative Action:</strong> Insentif khusus untuk daerah 3T (Terdepan, Terpencil, Tertinggal)</li>
+                        <li><strong>Standarisasi Layanan:</strong> SOP dan quality assurance di seluruh Puskesmas</li>
+                        <li><strong>Capacity Building:</strong> Pelatihan tenaga kesehatan berbasis kompetensi</li>
+                        <li><strong>Digital Infrastructure:</strong> Konektivitas Satu Sehat untuk monitoring real-time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TAB 5: RISIKO & KEBOCORAN -->
+            <div class="tab-content" id="tab5">
+                <div class="tab-header">
+                    <h2>Deteksi Inefisiensi dan Kebocoran Dana</h2>
+                    <button class="btn-export" onclick="exportTab('tab5')">📥 Export Data</button>
+                </div>
+
+                <div class="alert alert-error">
+                    <strong>🚨 Prioritas Tinggi:</strong> Potensi kebocoran Rp 170-510 Miliar (5-15% dari total anggaran)
+                </div>
+
+                <div class="card">
+                    <h3>Estimasi Kebocoran Dana</h3>
+                    <div class="leak-visualization">
+                        <div class="leak-stats">
+                            <div class="leak-amount">
+                                <span class="leak-range">Rp 170 - 510 Miliar</span>
+                                <span class="leak-percent">5% - 15% dari total anggaran</span>
+                            </div>
+                        </div>
+                        <div class="leak-bar-container">
+                            <div class="leak-bar-label">Total Anggaran: Rp 3.400 Miliar</div>
+                            <div class="leak-bar">
+                                <div class="leak-bar-min" style="width: 5%;">5%</div>
+                                <div class="leak-bar-max" style="width: 10%;">15%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Risk Heat Map</h3>
+                    <table class="risk-table">
+                        <thead>
+                            <tr>
+                                <th>Area Risiko</th>
+                                <th>Level Risiko</th>
+                                <th>Indikator Deteksi</th>
+                                <th>Aksi Mitigasi</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="risk-high">
+                                <td>Pemotongan Dana Jaspel</td>
+                                <td><span class="risk-badge risk-high-badge">TINGGI</span></td>
+                                <td>Komplain petugas, audit internal</td>
+                                <td>Transfer langsung, monitoring ketat</td>
+                                <td><span class="status-badge status-pending">Perlu Implementasi</span></td>
+                            </tr>
+                            <tr class="risk-high">
+                                <td>Manipulasi Kehadiran Petugas</td>
+                                <td><span class="risk-badge risk-high-badge">TINGGI</span></td>
+                                <td>Cross-check absensi vs layanan</td>
+                                <td>Sistem Satu Sehat terintegrasi</td>
+                                <td><span class="status-badge status-progress">Dalam Progress</span></td>
+                            </tr>
+                            <tr class="risk-high">
+                                <td>Pengelolaan Tidak Transparan</td>
+                                <td><span class="risk-badge risk-high-badge">TINGGI</span></td>
+                                <td>Audit BPK, whistleblowing</td>
+                                <td>Dashboard real-time publik</td>
+                                <td><span class="status-badge status-pending">Perlu Implementasi</span></td>
+                            </tr>
+                            <tr class="risk-medium-high">
+                                <td>Pungutan Liar dari Pasien</td>
+                                <td><span class="risk-badge risk-medium-high-badge">SEDANG-TINGGI</span></td>
+                                <td>Survei kepuasan &amp; komplain</td>
+                                <td>Sosialisasi hak gratis, hotline</td>
+                                <td><span class="status-badge status-progress">Dalam Progress</span></td>
+                            </tr>
+                            <tr class="risk-medium">
+                                <td>Penggelembungan Harga &amp; Volume</td>
+                                <td><span class="risk-badge risk-medium-badge">SEDANG</span></td>
+                                <td>Audit harga pasar vs realisasi</td>
+                                <td>e-Procurement, audit sampling</td>
+                                <td><span class="status-badge status-progress">Dalam Progress</span></td>
+                            </tr>
+                            <tr class="risk-medium">
+                                <td>Setoran/Suap ke Atasan</td>
+                                <td><span class="risk-badge risk-medium-badge">SEDANG</span></td>
+                                <td>Audit keuangan mendalam</td>
+                                <td>Rotasi jabatan, penguatan APIP</td>
+                                <td><span class="status-badge status-pending">Perlu Implementasi</span></td>
+                            </tr>
+                            <tr class="risk-medium">
+                                <td>Anggaran Ganda</td>
+                                <td><span class="risk-badge risk-medium-badge">SEDANG</span></td>
+                                <td>Rekonsiliasi lintas program</td>
+                                <td>Sistem akuntansi terintegrasi</td>
+                                <td><span class="status-badge status-progress">Dalam Progress</span></td>
+                            </tr>
+                            <tr class="risk-medium">
+                                <td>Belanja Fiktif</td>
+                                <td><span class="risk-badge risk-medium-badge">SEDANG</span></td>
+                                <td>Verifikasi fisik vs dokumen</td>
+                                <td>Surprise audit, GPS tagging</td>
+                                <td><span class="status-badge status-pending">Perlu Implementasi</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card highlight-card">
+                    <h3>⚡ Action Items Prioritas</h3>
+                    <div class="action-items">
+                        <div class="action-item action-urgent">
+                            <div class="action-priority">URGENT</div>
+                            <div class="action-content">
+                                <strong>Implementasi Dashboard Real-time</strong>
+                                <p>Timeline: 3 bulan | Budget: Rp 5 Miliar</p>
+                            </div>
+                        </div>
+                        <div class="action-item action-urgent">
+                            <div class="action-priority">URGENT</div>
+                            <div class="action-content">
+                                <strong>Digitalisasi Penuh Sistem Satu Sehat</strong>
+                                <p>Timeline: 6 bulan | Budget: Rp 15 Miliar</p>
+                            </div>
+                        </div>
+                        <div class="action-item action-high">
+                            <div class="action-priority">HIGH</div>
+                            <div class="action-content">
+                                <strong>Penguatan Audit Internal</strong>
+                                <p>Timeline: 2 bulan | Budget: Rp 3 Miliar</p>
+                            </div>
+                        </div>
+                        <div class="action-item action-high">
+                            <div class="action-priority">HIGH</div>
+                            <div class="action-content">
+                                <strong>Whistleblowing System</strong>
+                                <p>Timeline: 2 bulan | Budget: Rp 2 Miliar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <strong>📅 Timeline Implementasi:</strong> Sistem pengendalian harus diimplementasikan dalam 3 bulan ke depan
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
